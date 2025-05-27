@@ -28,5 +28,28 @@ parisTimeElement.innerHTML = parisTime.format("H:mm:s");
 
 }
 
+function updateCity(event) {
+    let cityTimezone = event.target.value;
+    let cityName = cityTimezone.replace("_", "").split("/")[1];
+    let cityTime = moment().tz(cityTimezone);
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML =` 
+    <div>
+    <div class="city"> 
+    <div>
+<h2>${cityName}</h2>
+<div class="date">${cityTime.format("Do, MMMM YYYY")}</div>
+</div>
+<div class="time">${cityTime.format("H:mm:ss")}</div> 
+</div> `;
+    
+}
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
+
+
 updateTime();
 setInterval (updateTime, 1000);
+
+
