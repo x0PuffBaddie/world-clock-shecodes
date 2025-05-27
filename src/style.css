@@ -1,11 +1,11 @@
 body {
-    background-color: rgb(255, 246, 246);
+    background-image: url(cloud9.jpg);
     font-family: 'Courier New', Courier, monospace;
 }
 .container {
     max-width: 600px;
     margin: 60px auto;
-    background-color: antiquewhite;
+    background-color: rgba(250, 197, 223, 0.616);
     padding: 30px;
     box-shadow: 10px 5px 5px;
     border-radius: 10px;
